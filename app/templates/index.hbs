@@ -1,7 +1,7 @@
 <h1>Welcome to Super-Rentals Homepage</h1>
 <p>We hope that you would be much satisfied with our services Mr/Mrs <br/></p>
 <ul>{{#each model as |rental|}}
-  <li>{{rental.owner}}'s in'{{rental.city}} with {{rental.bedrooms}}bedrooms<br />{{rental.image}}</li>
+  {{rental-tile rental=rental}}
   {{/each}}
 </ul>
 <p>To know about how super-rentals{{#link-to 'about'}}click here{{/link-to}}<br/></p>
