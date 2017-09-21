@@ -2,7 +2,7 @@
 <p>We hope that you would be much satisfied with our services Mr/Mrs <br/></p>
 <ul>
   {{#each model as |rental|}}
-    {{rental-tile rental=rental}}
+    {{rental-tile rental=rental destroyRental="destroyRental"}}
   {{/each}}
 </ul>
 <p>To know about how super-rentals{{#link-to 'about'}}click here{{/link-to}}<br/></p>
