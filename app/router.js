@@ -10,7 +10,8 @@ Router.map(function() {
   this.route('about');
   this.route('contact');
   this.route('advertisment');
-  this.route('rental');
+  this.route('rental',{path : '/rental/:rental_id'});
+  //extracts a single rental id fro the firebase
 });
 
 export default Router;
