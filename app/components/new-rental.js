@@ -8,6 +8,7 @@ export default Ember.Component.extend({
     },
     saveRental1() {
       var params = {
+        //sets the input fields recieved from the user in json format so as to be saved in the firebase
         owner: this.get('owner'),
         city: this.get('city'),
         type: this.get('type'),
