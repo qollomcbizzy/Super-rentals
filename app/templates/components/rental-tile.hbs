@@ -6,5 +6,7 @@
      {{else}}
      <button {{action 'imageShow'}}>show image</button>
      {{/if}}
+     {{update-rental rental=rental update="update"}}
+     {{!--we are rendering the updte rental--}}
      <button {{action 'delete' rental}}>Delete the image</button>
 </li>
