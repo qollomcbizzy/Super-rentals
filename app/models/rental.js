@@ -7,4 +7,5 @@ export default DS.Model.extend({
   bedrooms:DS.attr(),
   image:DS.attr()
   //DS stands for the data store while "attr()" stands for attribute
+  //gets data from the firebase 
 });

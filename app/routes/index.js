@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     return this.store.findAll('rental');
   },
   actions: {
-    //creates a new record in the firebase to store the data 
+    //creates a new record in the firebase to store the data
     saveRental3(params) {
       var newRental = this.store.createRecord('rental', params);
       newRental.save();
@@ -13,7 +13,7 @@ export default Ember.Route.extend({
     },
     destroyRental(rental){
       rental.destroyRecord();
-      this.transitionTo('index')
+      this.transitionTo('index');
       //the trennsitonTo calls the index page after the delete action has been done
     }
   }
