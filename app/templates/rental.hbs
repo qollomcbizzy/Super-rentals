@@ -1,4 +1,6 @@
 {{outlet}}
 <h2>More information about {{model.owner}}'s {{model.type}}'</h2>
 {{!--rendered the rental-detail--}}
-{{rental-details rental=model}}
+{{update-rental rental=rental update="update"}}
+{{!--we are rendering the updte rental--}}
+{{rental-details rental=model destroyRental="destroyRental"}}
