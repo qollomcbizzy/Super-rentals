@@ -11,7 +11,7 @@ export default Ember.Route.extend({
       newRental.save();
       this.transitionTo('index');
     },
-    update(rental,params){
+    /*update(rental,params){
       Object.keys(params).forEach(function(key){
         if(params[key]!==undefined){
           //updates the keys that are not undefined and the undefined they are not updated
@@ -21,10 +21,12 @@ export default Ember.Route.extend({
       rental.save();
       this.transitionTo('index');
     },
+
     destroyRental(rental){
       rental.destroyRecord();
       this.transitionTo('index');
       //the trennsitonTo calls the index page after the delete action has been done
     }
+    */
   }
 });

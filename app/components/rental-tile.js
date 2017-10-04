@@ -9,6 +9,7 @@ export default Ember.Component.extend({
     imageHide:function(){
       this.set('IsImageShowing',false);
     },
+  /*
     update(rental,params){
       this.sendAction('update' ,rental,params);
     },
@@ -17,5 +18,6 @@ export default Ember.Component.extend({
         this.sendAction('destroyRental',rental)
       }
     }
+    */
   }
 });
