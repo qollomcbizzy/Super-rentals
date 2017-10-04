@@ -1,5 +1,12 @@
 {{!-- The following component displays Ember's default welcome message. --}}
 {{!--welcome-page--}}
 {{!-- Feel free to remove this! --}}
-
+<div class="container">
+  <header class="jumbtron">
+    <h1>Super rentals<h1>
+  </header>
 {{outlet}}
+<footer>
+  {{#link-to 'contact'}}You can reach how assistance{{/link-to}}
+</footer>
+</div>
