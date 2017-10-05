@@ -1,0 +1,19 @@
+{{!--yield--}}
+{{#if addAdvertisment}}
+<h2>Add an advertisment</h2>
+<div class="row">
+  <form>
+  <div class="col-md-6 col-md-offset-1">
+    <div class="form-group">
+      {{input value="name" id="name"}}
+    </div>
+    <div class="form-group">
+      {{input value="image" id="image"}}
+    </div>
+    <button {{action 'saveadvertisment'}}>Save</button>
+  </div>
+ </form>
+</div>
+{{else}}
+<button {{action 'back'}}>back</button>
+{{/if}}

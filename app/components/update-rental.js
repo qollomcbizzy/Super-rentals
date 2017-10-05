@@ -16,7 +16,7 @@ export default Ember.Component.extend({
       };
       this.set('updateRentalForm',false);
       this.sendAction('update',rental,params)
-      //data is taken to the firebase in params hash inform of json
+      //data is taken to the firebase in params hash inform of jsons
     }
   }
 });
