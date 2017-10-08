@@ -10,17 +10,20 @@ export default Ember.Route.extend({
     view:function(){
       this.set()
     },
-    saveadvertisment(){
+    saveadvertisment(advertisment){
       var parameters ={
         name:this.get('name'),
         image:this.get('image'),
       }
     this.set('addAdvertisment',false);
-    this.sendAction('saveadvertisment',parameters);
+    this.sendAction('saveadvertisment',advertisment,parameters);
     },
-    delete(){
+    delete(advertisment){
       this.destroyAdvertisment();
       this.transitionTo('advertisment');
     },
+    back(){
+    this.transitionTo('advertisment');
+    }
   }
 });

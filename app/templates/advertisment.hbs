@@ -1,6 +1,7 @@
 {{outlet}}
 <h2>You can view the advertisment</h2>
 <h3><marquee direction="right">welcome to the advertismet site</marquee></h3>
-<button {{action 'view'}}>View advertisment</button>
-<button {{action 'add'}}>Add an advertisment</button>
-<button{{action 'delete'}}>Delete</button>
+<button {{action 'view' }}>View advertisment</button>
+{{add-advertisment advertisment=advertisment add="add"}}
+{{add-advertisment advertisment=advertisment destroyAdvertisment="destroyAdvertisment"}}
+<button{{action 'delete' advertisment}}>Delete</button>
