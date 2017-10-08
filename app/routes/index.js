@@ -19,6 +19,11 @@ export default Ember.Route.extend({
       newRental.save();
       this.transitionTo('index');
     },
+    saveReview(params){
+      var newReview = this.store.createRecord('review',params);
+      newReview.save();
+      this.transitionTo('index');
+    }
     /*update(rental,params){
       Object.keys(params).forEach(function(key){
         if(params[key]!==undefined){
