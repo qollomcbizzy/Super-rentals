@@ -4,6 +4,10 @@ export default Ember.Route.extend({
   model (){
     //return more models in one hook
     return Ember.RSVP.hash({
+      /*
+      Ember RSVP.hash is a method included in Ember,
+      built with the RSVP.js Library. It allows us to load multiple JavaScript promises at once
+      */
       rentals: this.store.findAll('rental'),
       reviews: this.store.findAll('review')
     });

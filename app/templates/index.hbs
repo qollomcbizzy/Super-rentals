@@ -1,10 +1,19 @@
 <h1>Welcome to Super-Rentals Homepage</h1>
 <p>We hope that you would be much satisfied with our services Mr/Mrs <br/></p>
 <ul>
-  {{#each model as |rental|}}
+  {{#each model.rentals as |rental|}}
     {{rental-tile rental=rental }}
   {{/each}}
 </ul>
+<h2> All Reviews </h2>
+
+<ul>
+  {{#each model.reviews as |review|}}
+    <li>{{review.rating}} - {{review.content}} - by {{review.author}}</li>
+  {{/each}}
+</ul>
+
+<hr>
 {{new-rental saveRental2="saveRental3"}}
 <p>To know about how super-rentals{{#link-to 'about'}}click here{{/link-to}}<br/></p>
 <p>To make a contact with us just {{#link-to 'contact'}}click here{{/link-to}}<br/></p>
