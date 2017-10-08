@@ -2,7 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model (){
-    return this.store.findAll('rental');
+    //return more models in one hook
+    return Ember.RSVP.hash({
+      rentals: this.store.findAll('rental'),
+      reviews: this.store.findAll('review')
+    });
   },
   actions: {
     //creates a new record in the firebase to store the data
