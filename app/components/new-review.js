@@ -11,7 +11,8 @@ export default Ember.Component.extend({
       var params={
         author:this.get('author'),
         rating:this.get('rating'),
-        content:this.get('content')
+        content:this.get('content'),
+        rental:this.get('rental')
       };
       this.set('addReview',false);
       this.sendAction('saveReview',params);
