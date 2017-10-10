@@ -39,5 +39,9 @@ Afterwards, take us to the page displaying details for "rental".
   destroyRental(rental){
     rental.destroyRecord();
     this.transitionTo('index');
-  }
+  },
+  destroyReview(review) {
+      review.destroyRecord();
+      this.transitionTo('index');
+    }
 });
