@@ -25,7 +25,7 @@ export default Ember.Route.extend({
       this.transitionTo('index');
       */
       //changed it to the route handler for rental
-    }
+    //}
     /*update(rental,params){
       Object.keys(params).forEach(function(key){
         if(params[key]!==undefined){
@@ -44,4 +44,4 @@ export default Ember.Route.extend({
     }
     */
   }
-});
+  });
