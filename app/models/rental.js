@@ -8,6 +8,7 @@ export default DS.Model.extend({
   image:DS.attr(),
   //DS stands for the data store while "attr()" stands for attribute
   //gets data from the firebase
-  reviews:DS.hasMany('review',{ async :true})
+  reviews:DS.hasMany('review',{ async :true}),
   //hasMany is used to show it has many reviews
+  cost:DS.attr()
 });

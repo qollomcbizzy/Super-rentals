@@ -7,5 +7,5 @@ export function rentalPopularity(params/*, hash*/) {
    return Ember.String.htmlSafe('<span class="glyphicon glyphicon-fire"></span>');
    //ember.string.htmlSafe it allows us to render the html line
 }
-
+}
 export default Ember.Helper.helper(rentalPopularity);
