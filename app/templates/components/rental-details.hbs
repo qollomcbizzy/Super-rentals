@@ -7,7 +7,8 @@ available by arrangement through {{rental.owner}}.
 
 <ul>
   {{#each model.reviews as |review|}}
-    {{review-tile review=review}}
+    {{review-tile review=review destroyReview="destroyReview"}}
+    <!--we pass destroyReview to the route handler for the parent -->
   {{/each}}
 </ul>
 
