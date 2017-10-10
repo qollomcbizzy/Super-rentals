@@ -36,12 +36,32 @@ Afterwards, take us to the page displaying details for "rental".
      });
      this.transitionTo('rental', rental);
    },
-  destroyRental(rental){
+  /*destroyRental(rental){
     rental.destroyRecord();
     this.transitionTo('index');
   },
-  destroyReview(review) {
-      review.destroyRecord();
+    */
+    destroyRental(rental) {
+      var review_deletions = rental.get('reviews').map(function(review) {
+        return review.destroyRecord();
+      });
+      Ember.RSVP.all(review_deletions).then(function() {
+        return rental.destroyRecord();
+      });
       this.transitionTo('index');
-    }
+    },
+    /*
+    Here, we define a variable review_deletions that iterates over all the rental's
+    reviews, destroying them one by one. The Ember.RSVP.all(review_deletions) waits
+     until all reviews are destroyed before proceeding to then destroy the rental.
+     Similar to the manner we use Ember.RSVP.hash when returning multiple models on
+      one route, Ember.RSVP.all also 'packages' multiple promises into one.
+      The one primary promise is only resolved when each of its containing promises
+      are fulfilled. This guarantees that Ember won't delete the rental until
+       each review has been destroyed.
+    */
+    destroyReview(review) {
+        review.destroyRecord();
+        this.transitionTo('index');
+      }
 });
