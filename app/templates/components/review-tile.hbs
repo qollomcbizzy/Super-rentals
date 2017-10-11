@@ -1,3 +1,8 @@
 {{!--yield--}}
-<li>{{review.rating}} - {{review.content}} - by {{review.author}}</li>
+
+<li>
+  <h3>{{heading}}</h3>
+{{!--the heading is used to call the heading function from the review-tile.js--}}
+<p> {{review.content}}</p>
+</li>
 <button {{action 'delete' review}}>Delete</button>

@@ -9,10 +9,10 @@ export function rentalCost(params/*, hash*/) {
    else if(rentalPrice >= 100){
      return '$$$';
    }
-   else if(rentalPrice >=50){
+   else if(rentalPrice >= 50){
      return '$$';
    }
-   else if(rentalPrice =< 49){
+   else if(rentalPrice <= 49){
      return '$';
    }
    else{

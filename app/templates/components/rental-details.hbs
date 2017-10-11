@@ -6,7 +6,8 @@ available by arrangement through {{rental.owner}}.
 <h2> All Reviews </h2>
 
 <ul>
-  {{#each model.reviews as |review|}}
+  {{#each sortedReviews as |review|}}
+  <!--we call the sortde reviews from the review-details.js -->
     {{review-tile review=review destroyReview="destroyReview"}}
     <!--we pass destroyReview to the route handler for the parent -->
   {{/each}}
